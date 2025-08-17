@@ -1,7 +1,7 @@
-import React from "react";
+import Layout from "../../components/Layout";
 
 const MyOrders = () => {
-  return <div>MyOrders</div>;
+  return <Layout>My orders</Layout>;
 };
 
 export default MyOrders;

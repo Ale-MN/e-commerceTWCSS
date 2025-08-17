@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../../components/Layout";
 
 const MyAccount = () => {
-  return <div>MyAccount</div>;
+  return <Layout>My Account</Layout>;
 };
 
 export default MyAccount;
