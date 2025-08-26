@@ -1,6 +1,9 @@
 import { GoPlus } from "react-icons/go";
+import { useContext } from "react";
+import { ShoppingContext } from "../../Context";
 
 const Card = (data) => {
+  const contexto = useContext(ShoppingContext);
   return (
     <div className="bg-white cursor-pointer w-56 h-60">
       <figure className="relative mb-2 w-full h-4/5 ">
@@ -12,7 +15,10 @@ const Card = (data) => {
           src={data.data.images[0]}
           alt={data.data.title}
         />
-        <div className="absolute top-0 right-0 flex justify-center items-center m-2 p-1 bg-white w-6 h-6 rounded-full">
+        <div
+          className="absolute top-0 right-0 flex justify-center items-center m-2 p-1 bg-white w-6 h-6 rounded-full"
+          onClick={() => contexto.setCount(contexto.count + 1)}
+        >
           <GoPlus />
         </div>
       </figure>

@@ -8,6 +8,7 @@ import SignIn from "../SignIn";
 import NotFound from "../NotFound";
 import NavBar from "../../components/NavBar";
 import "./App.css";
+import { ShoppingProvider } from "../../Context";
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -25,10 +26,12 @@ const AppRoutes = () => {
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <AppRoutes />
-        <NavBar />
-      </BrowserRouter>
+      <ShoppingProvider>
+        <BrowserRouter>
+          <AppRoutes />
+          <NavBar />
+        </BrowserRouter>
+      </ShoppingProvider>
     </>
   );
 };
