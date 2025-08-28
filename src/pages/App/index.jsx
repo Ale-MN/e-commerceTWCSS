@@ -9,6 +9,7 @@ import NotFound from "../NotFound";
 import NavBar from "../../components/NavBar";
 import "./App.css";
 import { ShoppingProvider } from "../../Context";
+import ChoSideMenu from "../../components/ChOSideMenu";
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -30,6 +31,7 @@ const App = () => {
         <BrowserRouter>
           <AppRoutes />
           <NavBar />
+          <ChoSideMenu />
         </BrowserRouter>
       </ShoppingProvider>
     </>

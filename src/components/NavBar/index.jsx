@@ -77,8 +77,15 @@ const NavBar = () => {
             Sign in
           </NavLink>
         </li>
-        <li className="flex gap-0.5 items-center">
-          <LuShoppingCart />
+        <li
+          className={`${
+            contexto.isOMiOrden
+              ? "bg-amber-200 w-8 p-1 rounded-full scale-110 transition duration-150"
+              : "none"
+          } flex gap-0.5 items-center cursor-pointer`}
+          onClick={() => contexto.openMiOrden()}
+        >
+          <LuShoppingCart className="w-4 h-4" />
           {contexto.count}
         </li>
       </ul>
